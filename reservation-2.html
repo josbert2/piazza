@@ -1,0 +1,98 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="css/revolution.css"/><link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="js/fancy/jquery.fancybox.min.css"/>
+    <title>Document</title><link rel="stylesheet" href="/js/md/themes/default.css" id="theme_base">
+<link rel="stylesheet" href="/js/md/themes/default.date.css" id="theme_date">
+<link rel="stylesheet" href="/js/md/themes/default.time.css" id="theme_time">
+  </head>
+  <body class="app-js reservation-steps">
+    <div class="section-overlay" style="background-image: url(https://images.pexels.com/photos/60258/pexels-photo-60258.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)">
+      <div class="content-reservation">
+        <div class="container">
+          <div class="fs-form-wrap" id="fs-form-wrap">
+            <div class="fs-title">
+              <h1>Make you reservation in 
+                <div class="title-font">Little Piazza</div>
+              </h1>
+            </div>
+            <form class="fs-form fs-form-full primary-form" id="myform" autocomplete="off">
+              <ol class="fs-fields">
+                <li>
+                  <label class="fs-field-label fs-anim-upper" for="q1">Select Date</label>
+                  <input class="fs-anim-lower datepicker" id="q1" name="q1" type="text" placeholder="0/00/0000" required=""/>
+                </li>
+                <li>
+                  <label class="fs-field-label fs-anim-upper" for="q2" data-info="01:01 PM.">Select time</label>
+                  <input class="fs-anim-lower timepicker" id="q2" name="q2" type="text" placeholder="01:01 PM." required=""/>
+                </li>
+                <li>
+                  <label class="fs-field-label fs-anim-upper" for="q5">Number of Guest?</label>
+                  <input class="fs-mark fs-anim-lower" id="q5" name="q5" type="number" placeholder="1000" step="100" min="100"/>
+                </li>
+                <li>
+                  <label class="fs-field-label fs-anim-upper" for="q6">Name?</label>
+                  <input class="fs-mark fs-anim-lower" id="q6" name="q6" type="text" placeholder="Name"/>
+                </li>
+                <li>
+                  <label class="fs-field-label fs-anim-upper" for="q7">Mobile Number?</label>
+                  <input class="fs-mark fs-anim-lower" id="q7" name="q7" type="text" placeholder="Mobile number"/>
+                </li>
+                <li>
+                  <label class="fs-field-label fs-anim-upper" for="q8">Email?</label>
+                  <input class="fs-mark fs-anim-lower" id="q8" name="q8" type="text" placeholder="Email"/>
+                </li>
+              </ol>
+              <!-- /fs-fields-->
+              <button class="fs-submit main-btn" type="submit">Send answers</button>
+            </form>
+            <!-- /fs-form-->
+          </div>
+          <!-- /fs-form-wrap-->
+          <!-- Related demos-->
+          <div class="related">
+            <p>If you enjoyed this demo you might also like:</p><a href="http://tympanus.net/Development/MinimalForm/"><img src="img/relatedposts/minimalform1-300x162.png"/>
+              <h3>Minimal Form Interface</h3></a><a href="http://tympanus.net/Development/ButtonComponentMorph/"><img src="img/relatedposts/MorphingButtons-300x162.png"/>
+              <h3>Morphing Buttons Concept</h3></a>
+          </div>
+        </div>
+        <!-- /container-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="/js/form/modernizr.custom.js"></script>
+        <script src="/js/form/classie.js"></script>
+        <script src="/js/form/selectFx.js"></script>
+        <script src="/js/form/fullscreenForm.js"></script><script src="/js/md/picker.js"></script>
+<script src="/js/md/picker.date.js"></script>
+<script src="/js/md/picker.time.js"></script>
+<script src="/js/md/legacy.js"></script>
+        <script>
+          (function() {
+          $('.datepicker').pickadate()
+          $('.timepicker').pickatime()
+          var formWrap = document.getElementById( 'fs-form-wrap' );
+          [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+          new SelectFx( el, {
+          stickyPlaceholder: false,
+          onChange: function(val){
+          document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+          }
+          });
+          } );
+          new FForm( formWrap, {
+          onReview : function() {
+          classie.add( document.body, 'overview' ); // for demo purposes only
+          }
+          } );
+          })();
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
